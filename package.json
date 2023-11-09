@@ -1,5 +1,5 @@
 {
-  "name": "node-red-contrib-aprs",
+  "name": "node-red-contrib-aprs2",
   "version": "3.0.0",
   "description": "Node-RED Nodes for connecting to APRS-IS and sending & receiving APRS and CWOP Frames.",
   "license": "Apache-2.0",
