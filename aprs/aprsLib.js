@@ -203,7 +203,9 @@ const formatPosition = (coordinates) => {
   m = m === 60 ? 59.99 : m;
   const lonM = Number(m).toFixed(2).padStart(5, "0");
 
-  return `${latD}${latM}${latO}/${lonD}${lonM}${lonO}`;
+  const symbolTable = payload.symbolTable || "/"
+
+  return `${latD}${latM}${latO}${symbolTable}${lonD}${lonM}${lonO}`;
 };
 
 const formatWxReport = ({
@@ -455,6 +457,8 @@ const formatPosData = (payload) => {
     throw new Error("Missing latitude value");
   }
 
+  const symbol = payload.symbol || "0"
+  
   let msg = "!";
   msg += formatPosition([lon, lat]);
   msg += "0";
