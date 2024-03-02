@@ -459,7 +459,7 @@ const formatPosData = (payload) => {
   
   let msg = "!";
   msg += formatPosition([lon, lat], payload.symbolTable || "/");
-  msg += "0";
+  msg += symbol;
 
   if (typeof comment === "string") {
     msg += ` ${comment}`;
